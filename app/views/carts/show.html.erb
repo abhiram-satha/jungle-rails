@@ -31,7 +31,7 @@
       </tfoot>
     </table>
   </div>
- <% if cart_subtotal_cents == 0%>
+ <% if enhanced_cart.length == 0%>
     <h5>There is currently nothing in your cart</h5>
     <%= link_to 'Return to Home', :root %>
   <% else %>
