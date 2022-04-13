@@ -16,7 +16,6 @@
         </tr>
       </thead>
       <tbody>
-      <%= p @order.line_items %>
         <% @order.line_items.each do |item| %>
           <%= render 'cart', item:item %>
         <% end %>
