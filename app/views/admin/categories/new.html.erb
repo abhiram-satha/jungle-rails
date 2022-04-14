@@ -8,7 +8,7 @@
     <%= link_to 'All Categories', [:admin, :categories], class: 'btn btn-info' %>
   </div>
 
- <%= form_for :category do |form| %>
+ <%= form_for :category, url:{controller:"categories", action:"create"} do |form| %>
   <p>
       <div class="form-group">
         <%= form.label :New_Category %>
