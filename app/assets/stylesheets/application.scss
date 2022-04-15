@@ -15,3 +15,13 @@ body {
 form.button_to {
   display: inline;
 }
+
+.logged_user {
+  color: #777;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.logged_user:hover {
+  color: #333;
+}
