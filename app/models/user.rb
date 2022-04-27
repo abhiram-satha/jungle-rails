@@ -2,4 +2,19 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  validates :name, presence: true
+  validates :email, presence: true, uniqueness: {case_sensitive: false}
+  validates :password, presence: true
+  validates :password_confirmation, presence: true
+
+  validate :password_length
+
+  def password_length
+    if password.length < 5
+      errors.add(:password, "password is not long enough")
+    end
+  end
+
+
+
 end
